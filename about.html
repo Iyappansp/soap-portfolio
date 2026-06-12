@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — Naturelle Supply Co</title>
+  <meta name="description"
+    content="The story behind Naturelle Supply Co — artisan soap manufacturers since 2010. Our mission, values, and commitment to natural, ethical production.">
+  <link rel="canonical" href="about.html">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .timeline-v {
+      position: relative;
+      padding-left: 3rem;
+    }
+
+    .timeline-v::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--primary), rgba(201, 138, 91, .1));
+    }
+
+    .tl-item {
+      position: relative;
+      margin-bottom: 2.5rem;
+    }
+
+    .tl-dot {
+      position: absolute;
+      left: -2.6rem;
+      top: .25rem;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--primary);
+      border: 3px solid var(--bg);
+      box-shadow: 0 0 0 2px var(--primary);
+      transition: var(--transition);
+    }
+
+    .tl-item:hover .tl-dot {
+      transform: scale(1.4);
+      box-shadow: 0 0 0 4px rgba(201, 138, 91, .2);
+    }
+
+    .tl-year {
+      font-family: var(--font-ui);
+      font-size: .72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--primary);
+      margin-bottom: .3rem;
+    }
+
+    .value-card {
+      padding: 2rem;
+      border-radius: var(--radius-xl);
+      background: var(--light);
+      border: 1px solid var(--border);
+      height: 100%;
+      transition: var(--transition);
+      text-align: center;
+    }
+
+    .value-card:hover {
+      box-shadow: var(--shadow-xl);
+      transform: translateY(-6px);
+      border-color: rgba(201, 138, 91, .25);
+    }
+
+    .value-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(201, 138, 91, .1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.25rem;
+      font-size: 1.75rem;
+      transition: var(--transition);
+    }
+
+    .value-card:hover .value-icon {
+      background: var(--primary);
+      transform: scale(1.1) rotate(-5deg);
+    }
+
+    .cert-badge {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.25rem 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: var(--light);
+      transition: var(--transition);
+    }
+
+    .cert-badge:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+    }
+
+    .cert-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      background: rgba(201, 138, 91, .1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="ns-loader">
+    <div class="loader-inner">
+      <div class="loader-ring"></div>
+      <p class="loader-wordmark">Naturelle</p>
+    </div>
+  </div>
+  <header id="main-header"></header>
+
+  <div class="pg-header">
+    <div class="ns-container">
+      <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span>About Us</span></div>
+      <h1 class="pg-header-title">Our Story</h1>
+      <p class="pg-header-sub">From a small workshop in 2010 to supplying 580+ businesses across 32 countries. Crafted
+        naturally, supplied professionally.</p>
+    </div>
+  </div>
+
+  <!-- Story Section -->
+  <section class="sec">
+    <div class="ns-container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6" data-reveal="right">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+            <div
+              style="border-radius:var(--radius-xl);background:linear-gradient(135deg,#C98A5B,#8B5E3C);aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;font-size:5rem;box-shadow:var(--shadow-xl);">
+              🧼</div>
+            <div style="display:flex;flex-direction:column;gap:1rem;">
+              <div
+                style="border-radius:var(--radius-lg);background:var(--secondary);padding:1.5rem;border:1px solid var(--border);flex:1;display:flex;flex-direction:column;justify-content:center;">
+                <p
+                  style="font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:var(--primary);line-height:1;">
+                  2010</p>
+                <p
+                  style="font-family:var(--font-ui);font-size:.78rem;color:var(--text-sub);text-transform:uppercase;letter-spacing:.08em;margin-top:.3rem;">
+                  Year Founded</p>
+              </div>
+              <div
+                style="border-radius:var(--radius-lg);background:var(--primary);padding:1.5rem;flex:1;display:flex;flex-direction:column;justify-content:center;">
+                <p style="font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:#fff;line-height:1;">
+                  14+</p>
+                <p
+                  style="font-family:var(--font-ui);font-size:.78rem;color:rgba(255,255,255,.8);text-transform:uppercase;letter-spacing:.08em;margin-top:.3rem;">
+                  Years Crafting</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-reveal="left" data-delay="200">
+          <span class="eyebrow">Our Beginning</span>
+          <h2 class="t-xl sec-title">Started with a Pot, a Purpose, and Pure Ingredients</h2>
+          <div class="divider-line"></div>
+          <p class="sec-sub mb-4">Naturelle Supply Co was founded in 2010 by Sarah Chen and Marcus Webb — a biochemist
+            and a packaging designer who shared one frustration: why were mainstream soaps filled with chemicals that
+            stripped skin dry?</p>
+          <p style="color:var(--text-sub);line-height:1.8;margin-bottom:1.5rem;">They started cold-pressing soaps in a
+            small workshop, gifting bars to friends and local boutiques. Within two years, hotels were calling. By 2015,
+            they were shipping internationally. Today, Naturelle supplies over 580 businesses across 32 countries —
+            every product still made with the same uncompromising natural standards as that first batch.</p>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="chip">🌿 Founded in London, UK</span>
+            <span class="chip">🌍 32 Countries</span>
+            <span class="chip">👥 85-person team</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="sec" style="background:var(--bg-alt);">
+    <div class="ns-container">
+      <div class="row g-5">
+        <div class="col-lg-4" data-reveal="right">
+          <span class="eyebrow">Our Journey</span>
+          <h2 class="t-xl sec-title">14 Years of Growth</h2>
+          <div class="divider-line"></div>
+          <p class="sec-sub">From a two-person workshop to an international wholesale operation — built on quality,
+            never compromising on ingredients.</p>
+        </div>
+        <div class="col-lg-8" data-reveal="left" data-delay="200">
+          <div class="timeline-v">
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-year">2010</div>
+              <h4 style="font-family:var(--font-ui);font-size:.95rem;font-weight:600;margin-bottom:.3rem;">The First
+                Batch</h4>
+              <p class="body-sm text-sub">Sarah and Marcus hand-press their first 200 rose petal soap bars in a rented
+                workshop. Gifted to 12 local boutiques — all sell out in a week.</p>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-year">2012</div>
+              <h4 style="font-family:var(--font-ui);font-size:.95rem;font-weight:600;margin-bottom:.3rem;">First Hotel
+                Contract</h4>
+              <p class="body-sm text-sub">The Harrington Hotel Group places a 5,000-unit order for custom amenity soaps.
+                First large-scale production run completed in 4 weeks.</p>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-year">2014</div>
+              <h4 style="font-family:var(--font-ui);font-size:.95rem;font-weight:600;margin-bottom:.3rem;">Bath Bomb
+                Range Launched</h4>
+              <p class="body-sm text-sub">Our now-bestselling bath bomb collection introduced. 6 original scents — Rose,
+                Ocean, Lavender, Citrus, Charcoal, and Vanilla. All still available today.</p>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-year">2016</div>
+              <h4 style="font-family:var(--font-ui);font-size:.95rem;font-weight:600;margin-bottom:.3rem;">Private Label
+                Programme</h4>
+              <p class="body-sm text-sub">Launched full private label service after 40+ clients asked for branded
+                products. First year: 28 brands launched using our formulations.</p>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-year">2019</div>
+              <h4 style="font-family:var(--font-ui);font-size:.95rem;font-weight:600;margin-bottom:.3rem;">COSMOS
+                Certification</h4>
+              <p class="body-sm text-sub">Achieved COSMOS Natural certification for our core soap range. Became first UK
+                wholesale soap supplier with full supply chain transparency documentation.</p>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-year">2022</div>
+              <h4 style="font-family:var(--font-ui);font-size:.95rem;font-weight:600;margin-bottom:.3rem;">Zero Plastic
+                Milestone</h4>
+              <p class="body-sm text-sub">Achieved zero plastic packaging across all product lines. Switched entirely to
+                kraft paper, glass, and compostable materials.</p>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-year">2026</div>
+              <h4 style="font-family:var(--font-ui);font-size:.95rem;font-weight:600;margin-bottom:.3rem;">580+ Partners
+                Globally</h4>
+              <p class="body-sm text-sub">Supplying 580+ wholesale partners across 32 countries. New fragrance studio
+                opened. Custom scent development now available to all partners.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Values -->
+  <section class="sec">
+    <div class="ns-container">
+      <div class="sec-header-center mb-5" data-reveal="up">
+        <span class="eyebrow">Mission & Values</span>
+        <h2 class="t-xl sec-title">What We Stand For</h2>
+        <div class="divider-line divider-center"></div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-reveal="up" data-delay="100">
+          <div class="value-card">
+            <div class="value-icon">🌿</div>
+            <h4 style="font-family:var(--font-ui);font-size:1rem;font-weight:600;margin-bottom:.65rem;">Natural
+              Integrity</h4>
+            <p class="body-sm text-sub">We will never use a synthetic ingredient when a natural one exists. No
+              exceptions, no "trace amounts" excuses, no loopholes.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-reveal="up" data-delay="200">
+          <div class="value-card">
+            <div class="value-icon">🤝</div>
+            <h4 style="font-family:var(--font-ui);font-size:1rem;font-weight:600;margin-bottom:.65rem;">Partnership
+              First</h4>
+            <p class="body-sm text-sub">Our clients' success is our success. Every decision we make — pricing,
+              packaging, production — considers the impact on our wholesale partners.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-reveal="up" data-delay="300">
+          <div class="value-card">
+            <div class="value-icon">🌍</div>
+            <h4 style="font-family:var(--font-ui);font-size:1rem;font-weight:600;margin-bottom:.65rem;">Earth
+              Responsibility</h4>
+            <p class="body-sm text-sub">Every material we use, every supplier we work with, every packaging decision is
+              made with the planet's health as a core consideration.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-reveal="up" data-delay="400">
+          <div class="value-card">
+            <div class="value-icon">🔬</div>
+            <h4 style="font-family:var(--font-ui);font-size:1rem;font-weight:600;margin-bottom:.65rem;">Science Meets
+              Nature</h4>
+            <p class="body-sm text-sub">Our biochemist founders ensure every formula is both naturally derived and
+              scientifically validated for safety, efficacy, and stability.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-reveal="up" data-delay="500">
+          <div class="value-card">
+            <div class="value-icon">✨</div>
+            <h4 style="font-family:var(--font-ui);font-size:1rem;font-weight:600;margin-bottom:.65rem;">Artisan Quality
+              at Scale</h4>
+            <p class="body-sm text-sub">We refuse to sacrifice quality for volume. Every batch is made with the same
+              care as our first 200 bars — regardless of order size.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-reveal="up" data-delay="600">
+          <div class="value-card">
+            <div class="value-icon">📖</div>
+            <h4 style="font-family:var(--font-ui);font-size:1rem;font-weight:600;margin-bottom:.65rem;">Full
+              Transparency</h4>
+            <p class="body-sm text-sub">Every ingredient, every supplier, every certification — published and available.
+              Our clients know exactly what's in every product they sell.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="sec" style="background:var(--bg-alt);">
+    <div class="ns-container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-5" data-reveal="right">
+          <span class="eyebrow">Certifications</span>
+          <h2 class="t-xl sec-title">Standards You Can Trust</h2>
+          <div class="divider-line"></div>
+          <p class="sec-sub mb-4">Our certifications aren't marketing — they're independently verified proof that we do
+            what we say. Every certificate available on request.</p>
+          <a href="contact.html" class="btn btn-primary">Request Documentation</a>
+        </div>
+        <div class="col-lg-7" data-reveal="left" data-delay="200">
+          <div class="d-flex flex-column gap-3">
+            <div class="cert-badge">
+              <div class="cert-icon">🌿</div>
+              <div>
+                <p style="font-family:var(--font-ui);font-size:.9rem;font-weight:600;margin-bottom:.2rem;">COSMOS
+                  Natural Certified</p>
+                <p class="body-sm text-sub">International certification for natural and organic cosmetics. Verified by
+                  Ecocert.</p>
+              </div>
+            </div>
+            <div class="cert-badge">
+              <div class="cert-icon">🐰</div>
+              <div>
+                <p style="font-family:var(--font-ui);font-size:.9rem;font-weight:600;margin-bottom:.2rem;">Leaping Bunny
+                  — Cruelty Free</p>
+                <p class="body-sm text-sub">Globally recognised cruelty-free certification. No animal testing at any
+                  stage.</p>
+              </div>
+            </div>
+            <div class="cert-badge">
+              <div class="cert-icon">♻️</div>
+              <div>
+                <p style="font-family:var(--font-ui);font-size:.9rem;font-weight:600;margin-bottom:.2rem;">Zero Plastic
+                  Packaging</p>
+                <p class="body-sm text-sub">Independently audited zero-plastic supply chain. All packaging compostable
+                  or recyclable.</p>
+              </div>
+            </div>
+            <div class="cert-badge">
+              <div class="cert-icon">🌱</div>
+              <div>
+                <p style="font-family:var(--font-ui);font-size:.9rem;font-weight:600;margin-bottom:.2rem;">Fair Trade
+                  Ingredient Sourcing</p>
+                <p class="body-sm text-sub">Key ingredients sourced from Fair Trade certified farms. Verified annually.
+                </p>
+              </div>
+            </div>
+            <div class="cert-badge">
+              <div class="cert-icon">🔬</div>
+              <div>
+                <p style="font-family:var(--font-ui);font-size:.9rem;font-weight:600;margin-bottom:.2rem;">Dermatologist
+                  Tested</p>
+                <p class="body-sm text-sub">All formulations patch-tested by independent dermatologists. Suitable for
+                  sensitive skin.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section
+    style="background:linear-gradient(135deg,var(--dark),#374151);padding:5rem 0;text-align:center;position:relative;overflow:hidden;">
+    <div
+      style="position:absolute;top:-30%;right:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(201,138,91,.15) 0%,transparent 70%);pointer-events:none;">
+    </div>
+    <div class="ns-container" style="position:relative;z-index:1;" data-reveal="up">
+      <h2 class="t-xl mb-3" style="color:#fff;">Ready to Partner With Us?</h2>
+      <p
+        style="color:rgba(255,255,255,.65);margin-bottom:2rem;font-size:1.05rem;max-width:500px;margin-left:auto;margin-right:auto;">
+        Join 580+ businesses that trust Naturelle for their premium natural bath and body supply.</p>
+      <div class="d-flex flex-wrap gap-3 justify-content-center">
+        <a href="wholesale-program.html" class="btn btn-primary btn-lg">Apply for Wholesale</a>
+        <a href="contact.html" class="btn btn-ghost btn-lg">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <footer id="main-footer"></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

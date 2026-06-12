@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fragrance Development — Naturelle Supply Co</title>
+  <meta name="description" content="Custom fragrance development for private label soaps and bath bombs. Signature scents using pure essential oils and botanical extracts.">
+  <link rel="canonical" href="fragrance-development.html">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .scent-wheel { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+    @media(max-width:576px){ .scent-wheel{grid-template-columns:repeat(2,1fr);} }
+    .scent-tile { padding:1.75rem 1.25rem; border-radius:var(--radius-lg); border:1.5px solid var(--border); background:var(--light); text-align:center; cursor:pointer; transition:var(--transition); }
+    .scent-tile:hover { transform:translateY(-6px); box-shadow:var(--shadow-xl); border-color:var(--primary); }
+    .scent-tile:hover .scent-emoji { transform:scale(1.25) rotate(-8deg); }
+    .scent-emoji { font-size:2.5rem; display:block; transition:transform .35s cubic-bezier(.4,0,.2,1); margin-bottom:.75rem; }
+    .process-row { display:flex; align-items:flex-start; gap:1.5rem; padding:2rem; border:1px solid var(--border); border-radius:var(--radius-lg); background:var(--light); margin-bottom:1rem; transition:var(--transition); }
+    .process-row:hover { box-shadow:var(--shadow-lg); border-color:rgba(201,138,91,.3); }
+    .process-row-num { width:44px; height:44px; min-width:44px; background:var(--primary); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-weight:600; color:#fff; font-size:1.1rem; }
+  </style>
+</head>
+<body>
+<div id="ns-loader"><div class="loader-inner"><div class="loader-ring"></div><p class="loader-wordmark">Naturelle</p></div></div>
+<header id="main-header"></header>
+
+<!-- Hero -->
+<section style="background:linear-gradient(135deg,#1a0e07 0%,#2a1510 50%,#1F2937 100%); min-height:460px; display:flex; align-items:center; padding:calc(var(--header-h)+3rem) 0 4rem; position:relative; overflow:hidden;">
+  <canvas id="bubble-canvas" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.35;"></canvas>
+  <div class="orb orb-1"></div><div class="orb orb-2"></div>
+  <div class="ns-container" style="position:relative;z-index:2;">
+    <div class="breadcrumb" style="justify-content:flex-start;color:rgba(255,255,255,.4);margin-bottom:1.5rem;">
+      <a href="index.html" style="color:rgba(255,255,255,.4)">Home</a><span>›</span><span style="color:var(--primary-light)">Fragrance Development</span>
+    </div>
+    <div class="row align-items-center g-4">
+      <div class="col-lg-7" data-reveal="right">
+        <span class="eyebrow" style="color:var(--primary-light)">Fragrance Studio</span>
+        <h1 class="t-hero mb-4" style="color:#fff;">Create Your<br><em style="color:var(--primary-light);font-style:italic;">Signature</em><br>Scent</h1>
+        <p style="color:rgba(255,255,255,.7);font-size:1.05rem;line-height:1.85;max-width:520px;margin-bottom:2rem;">Our in-house perfumers craft bespoke fragrance profiles using only pure essential oils and botanical extracts — no synthetic musks, no artificial notes, no compromises.</p>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="contact.html" class="btn btn-primary btn-lg">Start Your Scent Journey</a>
+          <a href="#scent-library" class="btn btn-ghost btn-lg">Browse Scent Library</a>
+        </div>
+      </div>
+      <div class="col-lg-5 d-none d-lg-flex justify-content-center" data-reveal="left" data-delay="200">
+        <div style="text-align:center;">
+          <div style="font-size:6rem; line-height:1; margin-bottom:1rem; filter:drop-shadow(0 0 30px rgba(201,138,91,.5));">🧪</div>
+          <div class="d-flex justify-content-center gap-2 flex-wrap">
+            <span class="badge badge-primary">Pure EO Only</span>
+            <span class="badge badge-primary">No Synthetics</span>
+            <span class="badge badge-primary">Custom Blends</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Scent Library -->
+<section class="sec" id="scent-library">
+  <div class="ns-container">
+    <div class="sec-header-center mb-5" data-reveal="up">
+      <span class="eyebrow">Scent Library</span>
+      <h2 class="t-xl sec-title">Explore Our Fragrance Families</h2>
+      <div class="divider-line divider-center"></div>
+      <p class="sec-sub">24 signature scents across 6 fragrance families. All available as-is or as a starting point for your custom blend.</p>
+    </div>
+
+    <!-- Tabs for fragrance families -->
+    <div class="tabs-wrap">
+      <div class="tab-bar" style="justify-content:center;" data-reveal="up">
+        <button class="tab-btn active" data-tab="floral">🌸 Floral</button>
+        <button class="tab-btn" data-tab="woody">🪵 Woody</button>
+        <button class="tab-btn" data-tab="citrus">🍋 Citrus</button>
+        <button class="tab-btn" data-tab="herbal">🌿 Herbal</button>
+        <button class="tab-btn" data-tab="oriental">✨ Oriental</button>
+        <button class="tab-btn" data-tab="fresh">🌊 Fresh</button>
+      </div>
+
+      <div class="tab-pane active" data-tab="floral">
+        <div class="scent-wheel mt-4">
+          <div class="scent-tile" data-reveal="up" data-delay="100"><span class="scent-emoji">🌹</span><h5 style="font-family:var(--font-display);font-size:1rem;font-weight:600;margin-bottom:.3rem;">Rose Garden</h5><p class="body-sm text-sub">Bulgarian rose otto · soft · romantic · timeless</p></div>
+          <div class="scent-tile" data-reveal="up" data-delay="150"><span class="scent-emoji">💜</span><h5 style="font-family:var(--font-display);font-size:1rem;font-weight:600;margin-bottom:.3rem;">Lavender Field</h5><p class="body-sm text-sub">French lavender · calming · herbal-floral · serene</p></div>
+          <div class="scent-tile" data-reveal="up" data-delay="200"><span class="scent-emoji">🌸</span><h5 style="font-family:var(--font-display);font-size:1rem;font-weight:600;margin-bottom:.3rem;">Cherry Blossom</h5><p class="body-sm text-sub">Sakura · delicate · powdery · spring freshness</p></div>
+          <div class="scent-tile" data-reveal="up" data-delay="250"><span class="scent-emoji">🌼</span><h5 style="font-family:var(--font-display);font-size:1rem;font-weight:600;margin-bottom:.3rem;">Jasmine Night</h5><p class="body-sm text-sub">Jasmine sambac · rich · exotic · intoxicating</p></div>
+          <div class="scent-tile" data-reveal="up" data-delay="300"><span class="scent-emoji">🌺</span><h5 style="font-family:var(--font-display);font-size:1rem;font-weight:600;margin-bottom:.3rem;">Peony Blush</h5><p class="body-sm text-sub">Light peony · fresh · airy · feminine grace</p></div>
+          <div class="scent-tile" data-reveal="up" data-delay="350"><span class="scent-emoji">🌷</span><h5 style="font-family:var(--font-display);font-size:1rem;font-weight:600;margin-bottom:.3rem;">Ylang & Rose</h5><p class="body-sm text-sub">Ylang ylang + rose · sensual · luxurious blend</p></div>
+        </div>
+      </div>
+      <div class="tab-pane" data-tab="woody">
+        <div class="scent-wheel mt-4">
+          <div class="scent-tile" data-reveal="up" data-delay="100"><span class="scent-emoji">🪵</span><h5 style="font-family:var(--font-display);font-size:1rem;font-weight:600;margin-bottom:.3rem;">Sandalwood Deep</h5><p class="body-sm text-sub">Mysore sandalwood · warm · grounding · meditative</p></div>
+          <div class="scent-tile" data-reveal="up" data-delay="150"><span class="scent-emoji">🌲</span><h5 style="font-family:var(--font-display);font-size:1rem;font-weight:600;margin-bottom:.3rem;">Forest Walk</h5><p class="body-sm text-sub">Pine · cedarwood · fir · earthy forest air</p></div>
+          <div class="scent-tile" data-reveal="up" data-delay="200"><span class="scent-emoji">🏔️</span><h5 style="font-family:var(--font-display);font-size:1rem;font-weight:600;margin-bottom:.3rem;">Vetiver & Cedar</h5><p class="body-sm text-sub">Smoky vetiver · crisp cedar · masculine depth</p></div>
+          <div class="scent-tile" data-reveal="up" data-delay="250"><span class="scent-emoji">🔥</span><h5 style="font-family:var(--font-display);font-size:1rem;font-weight:600;margin-bottom:.3rem;">Oud & Amber</h5><p class="body-sm text-sub">Rare oud wood · amber resin · rich · prestige</p></div>
+        </div>
+      </div>
+      <div class="tab-pane" data-tab="citrus">
+        <div class="scent-wheel mt-4">
+          <div class="scent-tile" data-reveal="up" data-delay="100"><span class="scent-emoji">🍋</span><h5 style="font-family:var(--font-display);font-size:1rem;font-weight:600;margin-bottom:.3rem;">Citrus Dawn</h5><p class="body-sm text-sub">Lemon + grapefruit · bright · energising · clean</p></div>
+          <div class="scent-tile" data-reveal="up" data-delay="150"><span class="scent-emoji">🍊</span><h5 style="font-family:var(--font-display);font-size:1rem;font-weight:600;margin-bottom:.3rem;">Sweet Orange</h5><p class="body-sm text-sub">Cold-pressed orange · cheerful · warm citrus glow</p></div>
+          <div class="scent-tile" data-reveal="up" data-delay="200"><span class="scent-emoji">🍈</span><h5 style="font-family:var(--font-display);font-size:1rem;font-weight:600;margin-bottom:.3rem;">Bergamot & Lime</h5><p class="body-sm text-sub">Bergamot + key lime · sophisticated · Italian coast</p></div>
+          <div class="scent-tile" data-reveal="up" data-delay="250"><span class="scent-emoji">🌸</span><h5 style="font-family:var(--font-display);font-size:1rem;font-weight:600;margin-bottom:.3rem;">Neroli Blossom</h5><p class="body-sm text-sub">Neroli + petitgrain · delicate citrus-floral bridge</p></div>
+        </div>
+      </div>
+      <div class="tab-pane" data-tab="herbal">
+        <div class="scent-wheel mt-4">
+          <div class="scent-tile" data-reveal="up" data-delay="100"><span class="scent-emoji">🌿</span><h5 style="font-family:var(--font-display);font-size:1rem;font-weight:600;margin-bottom:.3rem;">Peppermint Cool</h5><p class="body-sm text-sub">Pure peppermint · cooling · invigorating · spa-fresh</p></div>
+          <div class="scent-tile" data-reveal="up" data-delay="150"><span class="scent-emoji">🍃</span><h5 style="font-family:var(--font-display);font-size:1rem;font-weight:600;margin-bottom:.3rem;">Eucalyptus Spa</h5><p class="body-sm text-sub">Australian eucalyptus · opening · clean · medicinal</p></div>
+          <div class="scent-tile" data-reveal="up" data-delay="200"><span class="scent-emoji">🌱</span><h5 style="font-family:var(--font-display);font-size:1rem;font-weight:600;margin-bottom:.3rem;">Rosemary & Mint</h5><p class="body-sm text-sub">Rosemary + spearmint · herbal · memory-boosting</p></div>
+          <div class="scent-tile" data-reveal="up" data-delay="250"><span class="scent-emoji">🫖</span><h5 style="font-family:var(--font-display);font-size:1rem;font-weight:600;margin-bottom:.3rem;">Green Tea Zen</h5><p class="body-sm text-sub">Matcha + green tea · light · calming · Japanese ritual</p></div>
+        </div>
+      </div>
+      <div class="tab-pane" data-tab="oriental">
+        <div class="scent-wheel mt-4">
+          <div class="scent-tile" data-reveal="up" data-delay="100"><span class="scent-emoji">🍦</span><h5 style="font-family:var(--font-display);font-size:1rem;font-weight:600;margin-bottom:.3rem;">Vanilla Musk</h5><p class="body-sm text-sub">Tahitian vanilla · warm · sweet · deeply comforting</p></div>
+          <div class="scent-tile" data-reveal="up" data-delay="150"><span class="scent-emoji">🌙</span><h5 style="font-family:var(--font-display);font-size:1rem;font-weight:600;margin-bottom:.3rem;">Black Amber</h5><p class="body-sm text-sub">Amber + dark musk · mysterious · night · seductive</p></div>
+          <div class="scent-tile" data-reveal="up" data-delay="200"><span class="scent-emoji">🕌</span><h5 style="font-family:var(--font-display);font-size:1rem;font-weight:600;margin-bottom:.3rem;">Arabian Oud</h5><p class="body-sm text-sub">Premium oud · rose · spice · Middle Eastern luxury</p></div>
+          <div class="scent-tile" data-reveal="up" data-delay="250"><span class="scent-emoji">🍫</span><h5 style="font-family:var(--font-display);font-size:1rem;font-weight:600;margin-bottom:.3rem;">Cacao & Spice</h5><p class="body-sm text-sub">Dark cacao + cinnamon · rich · indulgent · gourmand</p></div>
+        </div>
+      </div>
+      <div class="tab-pane" data-tab="fresh">
+        <div class="scent-wheel mt-4">
+          <div class="scent-tile" data-reveal="up" data-delay="100"><span class="scent-emoji">🌊</span><h5 style="font-family:var(--font-display);font-size:1rem;font-weight:600;margin-bottom:.3rem;">Ocean Breeze</h5><p class="body-sm text-sub">Sea minerals + marine algae · crisp · open horizon</p></div>
+          <div class="scent-tile" data-reveal="up" data-delay="150"><span class="scent-emoji">🌧️</span><h5 style="font-family:var(--font-display);font-size:1rem;font-weight:600;margin-bottom:.3rem;">Rain on Earth</h5><p class="body-sm text-sub">Petrichor + green notes · earthy freshness · renewal</p></div>
+          <div class="scent-tile" data-reveal="up" data-delay="200"><span class="scent-emoji">🏔️</span><h5 style="font-family:var(--font-display);font-size:1rem;font-weight:600;margin-bottom:.3rem;">Arctic Mint</h5><p class="body-sm text-sub">Ice mint + white tea · ultra-fresh · clean slate</p></div>
+          <div class="scent-tile" data-reveal="up" data-delay="250"><span class="scent-emoji">🌬️</span><h5 style="font-family:var(--font-display);font-size:1rem;font-weight:600;margin-bottom:.3rem;">White Linen</h5><p class="body-sm text-sub">Clean cotton + light musk · fresh laundry · purity</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Custom Fragrance Process -->
+<section class="sec" style="background:var(--bg-alt);">
+  <div class="ns-container">
+    <div class="sec-header-center mb-5" data-reveal="up">
+      <span class="eyebrow">Custom Development</span>
+      <h2 class="t-xl sec-title">How We Build Your Signature Scent</h2>
+      <div class="divider-line divider-center"></div>
+    </div>
+    <div class="row g-3" data-reveal="up">
+      <div class="col-12">
+        <div class="process-row">
+          <div class="process-row-num">1</div>
+          <div>
+            <h4 style="font-family:var(--font-ui);font-size:1rem;font-weight:600;margin-bottom:.4rem;">Scent Briefing</h4>
+            <p class="body-sm text-sub">We start with a detailed scent brief. You describe the mood, target customer, product occasion, and reference scents you love. We translate this into fragrance direction.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="process-row">
+          <div class="process-row-num">2</div>
+          <div>
+            <h4 style="font-family:var(--font-ui);font-size:1rem;font-weight:600;margin-bottom:.4rem;">Blend Formulation</h4>
+            <p class="body-sm text-sub">Our perfumers create 3 unique blends using pure essential oils and botanical extracts. Each formula is documented for full replicability across production runs.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="process-row">
+          <div class="process-row-num">3</div>
+          <div>
+            <h4 style="font-family:var(--font-ui);font-size:1rem;font-weight:600;margin-bottom:.4rem;">Sample & Feedback</h4>
+            <p class="body-sm text-sub">Scent samples shipped within 7 days. You test, share with your team and customers, then send feedback. We refine until it's perfect — unlimited revisions included.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="process-row">
+          <div class="process-row-num">4</div>
+          <div>
+            <h4 style="font-family:var(--font-ui);font-size:1rem;font-weight:600;margin-bottom:.4rem;">Formula Lock & Scale</h4>
+            <p class="body-sm text-sub">Once approved, your formula is locked and registered to your brand. We can scale from 200 to 50,000+ units with guaranteed scent consistency every batch.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:linear-gradient(135deg,#1a0e07,#2d1a0f);padding:5rem 0;text-align:center;position:relative;overflow:hidden;">
+  <div style="position:absolute;top:-30%;right:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(201,138,91,.18) 0%,transparent 70%);pointer-events:none;"></div>
+  <div class="ns-container" style="position:relative;z-index:1;" data-reveal="up">
+    <h2 class="t-xl mb-3" style="color:#fff;">Ready to Create Your Signature Scent?</h2>
+    <p style="color:rgba(255,255,255,.65);margin-bottom:2rem;font-size:1.05rem;max-width:500px;margin-left:auto;margin-right:auto;">Book a free fragrance consultation. Our perfumers will guide you from brief to final blend.</p>
+    <div class="d-flex flex-wrap gap-3 justify-content-center">
+      <a href="contact.html" class="btn btn-primary btn-lg">Book Fragrance Consultation</a>
+      <a href="private-label.html" class="btn btn-ghost btn-lg">Private Label Info</a>
+    </div>
+  </div>
+</section>
+
+<footer id="main-footer"></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naturelle Supply Co — Luxury Artisan Wholesale</title>
+  <meta name="description" content="Premium artisan soap and bath collection wholesale. The refined choice for luxury hotels, spas, and independent boutique brands.">
+  <meta property="og:title" content="Naturelle Supply Co — Luxury Wholesale">
+  <link rel="canonical" href="home-2.html">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Home 2 specific styles */
+    .split-hero{min-height:100svh;display:grid;grid-template-columns:1fr 1fr}
+    @media(max-width:767px){.split-hero{grid-template-columns:1fr;grid-template-rows:auto auto}}
+    .split-left{background:linear-gradient(160deg,#1a0e07 0%,#2d1a0f 100%);display:flex;align-items:center;padding:calc(var(--header-h) + 3rem) 3rem 3rem;position:relative;overflow:hidden}
+    .split-right{background:linear-gradient(160deg,var(--secondary) 0%,var(--bg) 100%);display:flex;align-items:center;justify-content:center;padding:calc(var(--header-h) + 2rem) 2rem 2rem;position:relative}
+    @media(max-width:767px){.split-left,.split-right{padding:2rem 1.25rem}.split-left{min-height:60svh}.split-right{min-height:50svh}}
+    .marquee-track{display:flex;gap:2rem;animation:marquee 22s linear infinite;white-space:nowrap}
+    .marquee-track:hover{animation-play-state:paused}
+    @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    .marquee-item{display:inline-flex;align-items:center;gap:.75rem;font-family:var(--font-display);font-size:1.2rem;color:var(--primary-dark);font-style:italic;flex-shrink:0}
+    .scent-card{padding:1.5rem;border-radius:var(--radius-lg);border:1px solid var(--border);background:var(--light);transition:var(--transition);cursor:pointer;text-align:center}
+    .scent-card:hover{border-color:var(--primary);box-shadow:var(--shadow-lg);transform:translateY(-4px)}
+    .scent-card.active{border-color:var(--primary);background:rgba(201,138,91,.05)}
+    .timeline-h{display:flex;gap:0;overflow-x:auto;padding-bottom:1rem;scrollbar-width:none}
+    .timeline-h::-webkit-scrollbar{display:none}
+    .tl-step{flex:1;min-width:140px;text-align:center;padding:1.5rem 1rem;position:relative;cursor:pointer}
+    .tl-step::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--border);transition:var(--transition)}
+    .tl-step.active::after,.tl-step:hover::after{background:var(--primary)}
+    .tl-num{width:40px;height:40px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:600;margin:0 auto .75rem;font-size:.95rem;transition:var(--transition)}
+    .tl-step:hover .tl-num{background:var(--primary-dark);transform:scale(1.1)}
+    .sus-card{padding:2rem;border-radius:var(--radius-xl);border:1px solid var(--border);background:var(--light);transition:var(--transition);position:relative;overflow:hidden}
+    .sus-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(to bottom,var(--primary),var(--primary-light))}
+    .sus-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px)}
+  </style>
+</head>
+<body>
+
+<div id="ns-loader"><div class="loader-inner"><div class="loader-ring"></div><p class="loader-wordmark">Naturelle</p></div></div>
+<header id="main-header"></header>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero" style="position: relative; overflow: hidden;">
+  <!-- Video background -->
+  <video autoplay loop muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+    <source src="assets/10574229-uhd_4096_2160_25fps.mp4" type="video/mp4">
+  </video>
+  
+  <canvas id="bubble-canvas" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2;opacity:.35"></canvas>
+  <!-- Orbs -->
+  <div class="orb orb-1" style="z-index:2"></div>
+  <div class="orb orb-2" style="z-index:2"></div>
+  <div class="orb orb-3" style="z-index:2"></div>
+
+  <div class="ns-container hero-z" style="position: relative; z-index: 3; padding-top:2rem;padding-bottom:3rem">
+    <div class="row align-items-center min-vh-100" style="padding-top:var(--header-h)">
+      <div class="col-lg-8 mx-auto text-center" data-reveal="right">
+        <div class="mb-3 d-flex justify-content-center">
+          <span class="badge badge-primary mb-3">Est. 2010 · Premium Wholesale</span>
+        </div>
+        <h1 class="t-hero mb-4 hero-text-shadow" style="color:#fff">
+          The Art of
+          <span style="display:block;color:var(--primary-light);font-style:italic">Natural</span>
+          Bathing
+        </h1>
+        <p class="body-lg mb-5 mx-auto hero-text-shadow" style="color:rgba(255,255,255,.9);max-width:580px">
+          Where artisan craftsmanship meets wholesale precision. We supply the world's finest hotels, spas, and boutique brands with handmade bathing products that tell a story.
+        </p>
+        <div class="d-flex flex-wrap gap-3 mb-5 justify-content-center">
+          <a href="products.html" class="btn btn-primary btn-lg">Discover Collections</a>
+          <a href="wholesale-program.html" class="btn btn-ghost btn-lg">Wholesale Info</a>
+        </div>
+        <!-- Social proof row -->
+        <div class="d-flex align-items-center gap-3 flex-wrap justify-content-center" style="padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.15);max-width:400px;margin:0 auto">
+          <div style="display:flex">
+            <div style="width:32px;height:32px;border-radius:50%;background:#C98A5B;border:2px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.75rem;font-weight:700;margin-left:-8px">S</div>
+            <div style="width:32px;height:32px;border-radius:50%;background:#A26745;border:2px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.75rem;font-weight:700;margin-left:-8px">J</div>
+            <div style="width:32px;height:32px;border-radius:50%;background:#8B5E3C;border:2px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.75rem;font-weight:700;margin-left:-8px">E</div>
+            <div style="width:32px;height:32px;border-radius:50%;background:#6B4423;border:2px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.7rem;font-weight:700;margin-left:-8px">+</div>
+          </div>
+          <div class="text-center">
+            <p style="color:rgba(255,255,255,.85);font-size:.85rem;font-weight:500;margin-bottom:0">580+ Wholesale Clients</p>
+            <p style="color:rgba(255,255,255,.45);font-size:.75rem;margin-bottom:0">Across 32 countries</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div style="position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:3;text-align:center;color:rgba(255,255,255,.4)">
+    <p style="font-family:var(--font-ui);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.5rem">Scroll</p>
+    <div style="width:1.5px;height:40px;background:linear-gradient(to bottom,rgba(201,138,91,.6),transparent);margin:0 auto"></div>
+  </div>
+</section>
+
+<!-- ══════════ MARQUEE ══════════ -->
+<div style="padding:1.5rem 0;background:var(--secondary);overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div class="marquee-track">
+    <span class="marquee-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px;vertical-align:middle;"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.2 2 4a7 7 0 0 1-10 14z"/><path d="M19 2c-2.26 2.33-4.14 4.07-7.11 5.93"/></svg> Shea Butter Soaps</span>
+    <span class="marquee-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px;vertical-align:middle;"><circle cx="12" cy="12" r="3"/><path d="M12 2a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4z"/><path d="M12 14a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4z"/></svg> Rose Bath Bombs</span>
+    <span class="marquee-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px;vertical-align:middle;"><circle cx="12" cy="12" r="10"/><path d="M12 2v20"/><path d="M2 12h20"/></svg> Citrus Collections</span>
+    <span class="marquee-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px;vertical-align:middle;"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.2 2 4a7 7 0 0 1-10 14z"/><path d="M19 2c-2.26 2.33-4.14 4.07-7.11 5.93"/></svg> Private Label</span>
+    <span class="marquee-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px;vertical-align:middle;"><circle cx="12" cy="12" r="8"/></svg> Activated Charcoal</span>
+    <span class="marquee-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px;vertical-align:middle;"><path d="M12 22c5.523 0 10-2.239 10-5V9H2v8c0 2.761 4.477 5 10 5z"/><path d="M22 9V5c0-1.657-4.477-3-10-3S2 3.343 2 5v4"/></svg> Honey & Oat Bars</span>
+    <span class="marquee-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px;vertical-align:middle;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Luxury Wholesale</span>
+    <span class="marquee-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px;vertical-align:middle;"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.2 2 4a7 7 0 0 1-10 14z"/><path d="M19 2c-2.26 2.33-4.14 4.07-7.11 5.93"/></svg> Shea Butter Soaps</span>
+    <span class="marquee-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px;vertical-align:middle;"><circle cx="12" cy="12" r="3"/><path d="M12 2a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4z"/><path d="M12 14a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4z"/></svg> Rose Bath Bombs</span>
+    <span class="marquee-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px;vertical-align:middle;"><circle cx="12" cy="12" r="10"/><path d="M12 2v20"/><path d="M2 12h20"/></svg> Citrus Collections</span>
+    <span class="marquee-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px;vertical-align:middle;"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.2 2 4a7 7 0 0 1-10 14z"/><path d="M19 2c-2.26 2.33-4.14 4.07-7.11 5.93"/></svg> Private Label</span>
+    <span class="marquee-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px;vertical-align:middle;"><circle cx="12" cy="12" r="8"/></svg> Activated Charcoal</span>
+    <span class="marquee-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px;vertical-align:middle;"><path d="M12 22c5.523 0 10-2.239 10-5V9H2v8c0 2.761 4.477 5 10 5z"/><path d="M22 9V5c0-1.657-4.477-3-10-3S2 3.343 2 5v4"/></svg> Honey & Oat Bars</span>
+    <span class="marquee-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px;vertical-align:middle;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Luxury Wholesale</span>
+  </div>
+</div>
+
+<!-- ══════════ ARTISAN CRAFTSMANSHIP ══════════ -->
+<section class="sec">
+  <div class="ns-container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6" data-reveal="right">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+          <div style="border-radius:var(--radius-xl);background:url('assets/img/artisan_craft.png') center/cover no-repeat;aspect-ratio:1;box-shadow:var(--shadow-xl)"></div>
+          <div style="display:flex;flex-direction:column;gap:1rem">
+            <div style="border-radius:var(--radius-lg);background:url('assets/img/artisan_botanical.png') center/cover no-repeat;aspect-ratio:1;box-shadow:var(--shadow-md)"></div>
+            <div style="border-radius:var(--radius-lg);background:var(--primary);padding:1.25rem;display:flex;flex-direction:column;justify-content:center;text-align:center;box-shadow:var(--shadow-md)">
+              <p style="font-family:var(--font-display);font-size:2rem;font-weight:700;color:#fff;line-height:1">4–6</p>
+              <p style="font-family:var(--font-ui);font-size:.72rem;color:rgba(255,255,255,.8);text-transform:uppercase;letter-spacing:.1em;margin-bottom:0;">Week Cure Time</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 text-center d-flex flex-column align-items-center" data-reveal="left" data-delay="200">
+        <span class="eyebrow" style="justify-content:center;">Artisan Craftsmanship</span>
+        <h2 class="t-xl sec-title text-center">Made Slowly. Made Properly.</h2>
+        <div class="divider-line divider-center"></div>
+        <p class="sec-sub mb-4 text-center mx-auto">In a world of mass production, we choose patience. Each bar is cold-pressed, hand-cut, and cured for weeks. Not because it's easy — because it's better.</p>
+        <div class="row g-3 mb-4 justify-content-center">
+          <div class="col-6 d-flex justify-content-center">
+            <div style="display:flex;align-items:center;gap:.75rem">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--primary);flex-shrink:0"></div>
+              <p style="font-family:var(--font-ui);font-size:.875rem;font-weight:500;margin-bottom:0;">Cold-press method</p>
+            </div>
+          </div>
+          <div class="col-6 d-flex justify-content-center">
+            <div style="display:flex;align-items:center;gap:.75rem">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--primary);flex-shrink:0"></div>
+              <p style="font-family:var(--font-ui);font-size:.875rem;font-weight:500;margin-bottom:0;">Hand-poured moulds</p>
+            </div>
+          </div>
+          <div class="col-6 d-flex justify-content-center">
+            <div style="display:flex;align-items:center;gap:.75rem">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--primary);flex-shrink:0"></div>
+              <p style="font-family:var(--font-ui);font-size:.875rem;font-weight:500;margin-bottom:0;">No artificial preservatives</p>
+            </div>
+          </div>
+          <div class="col-6 d-flex justify-content-center">
+            <div style="display:flex;align-items:center;gap:.75rem">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--primary);flex-shrink:0"></div>
+              <p style="font-family:var(--font-ui);font-size:.875rem;font-weight:500;margin-bottom:0;">Batch-numbered quality</p>
+            </div>
+          </div>
+          <div class="col-6 d-flex justify-content-center">
+            <div style="display:flex;align-items:center;gap:.75rem">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--primary);flex-shrink:0"></div>
+              <p style="font-family:var(--font-ui);font-size:.875rem;font-weight:500;margin-bottom:0;">Dermatologist tested</p>
+            </div>
+          </div>
+          <div class="col-6 d-flex justify-content-center">
+            <div style="display:flex;align-items:center;gap:.75rem">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--primary);flex-shrink:0"></div>
+              <p style="font-family:var(--font-ui);font-size:.875rem;font-weight:500;margin-bottom:0;">Full ingredient transparency</p>
+            </div>
+          </div>
+        </div>
+        <a href="about.html" class="btn btn-primary">Our Craft Story</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ BEST SELLING ══════════ -->
+<section class="sec" style="background:var(--bg-alt)">
+  <div class="ns-container">
+    <div class="sec-header-center mb-5" data-reveal="up">
+      <span class="eyebrow">Top Sellers</span>
+      <h2 class="t-xl sec-title">Best-Selling Collections</h2>
+      <div class="divider-line divider-center"></div>
+    </div>
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-3" data-reveal="up" data-delay="100">
+        <div class="product-card text-center">
+          <div class="p-img">
+            <img src="assets/img/soaps_category.png" alt="Rose & Shea Bar Soap" style="width:100%;height:100%;object-fit:cover;min-height:200px;display:block;">
+            <div class="p-overlay"></div>
+            <span class="badge badge-primary" style="position:absolute;top:.875rem;right:.875rem">#1 Seller</span>
+          </div>
+          <div class="p-info text-center">
+            <h3 class="t-sm mb-1">Rose & Shea Bar Soap</h3>
+            <p class="body-sm text-sub mb-1">Moisturising with real rose petals & organic shea</p>
+            <p class="p-moq text-center">MOQ: 100 units</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3" data-reveal="up" data-delay="200">
+        <div class="product-card text-center">
+          <div class="p-img">
+            <img src="assets/img/bath_bombs_category.png" alt="Ocean Mist Bath Bomb" style="width:100%;height:100%;object-fit:cover;min-height:200px;display:block;">
+            <div class="p-overlay"></div>
+            <span class="badge badge-success" style="position:absolute;top:.875rem;right:.875rem">New</span>
+          </div>
+          <div class="p-info text-center">
+            <h3 class="t-sm mb-1">Ocean Mist Bath Bomb</h3>
+            <p class="body-sm text-sub mb-1">Sea minerals, eucalyptus & lavender blend</p>
+            <p class="p-moq text-center">MOQ: 50 units</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3" data-reveal="up" data-delay="300">
+        <div class="product-card text-center">
+          <div class="p-img">
+            <img src="assets/img/private_label_category.png" alt="Charcoal Detox Soap" style="width:100%;height:100%;object-fit:cover;min-height:200px;display:block;">
+            <div class="p-overlay"></div>
+            <span class="badge badge-dark" style="position:absolute;top:.875rem;right:.875rem">Premium</span>
+          </div>
+          <div class="p-info text-center">
+            <h3 class="t-sm mb-1">Charcoal Detox Soap</h3>
+            <p class="body-sm text-sub mb-1">Activated bamboo charcoal & tea tree oil</p>
+            <p class="p-moq text-center">MOQ: 100 units</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3" data-reveal="up" data-delay="400">
+        <div class="product-card text-center">
+          <div class="p-img">
+            <img src="assets/img/artisan_botanical.png" alt="Neem & Turmeric Bar" style="width:100%;height:100%;object-fit:cover;min-height:200px;display:block;">
+            <div class="p-overlay"></div>
+          </div>
+          <div class="p-info text-center">
+            <h3 class="t-sm mb-1">Neem & Turmeric Bar</h3>
+            <p class="body-sm text-sub mb-1">Ayurvedic herbs for clear, healthy skin</p>
+            <p class="p-moq text-center">MOQ: 100 units</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4" data-reveal="up">
+      <a href="products.html" class="btn btn-secondary">Browse All Products</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FRAGRANCE DEVELOPMENT ══════════ -->
+<section class="sec" style="background:linear-gradient(135deg,#1a0e07 0%,#2d1a0f 100%);color:#fff;overflow:hidden;position:relative">
+  <div style="position:absolute;top:-20%;right:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(201,138,91,.18) 0%,transparent 70%);pointer-events:none"></div>
+  <div class="ns-container" style="position:relative;z-index:1">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5 text-center d-flex flex-column align-items-center" data-reveal="right">
+        <span class="eyebrow" style="color:var(--primary-light); justify-content: center;">Fragrance Studio</span>
+        <h2 class="t-xl mb-3 text-center">Your Signature Scent, Our Expertise</h2>
+        <p style="color:rgba(255,255,255,.65);line-height:1.85;margin-bottom:2rem" class="mx-auto text-center">Our in-house perfumers develop bespoke fragrance profiles using pure essential oils and botanical extracts — no synthetic musks or artificial notes.</p>
+        <div class="d-flex flex-wrap gap-2 mb-4 justify-content-center">
+          <span class="badge badge-primary">Floral Bouquets</span>
+          <span class="badge badge-primary">Woody Accords</span>
+          <span class="badge badge-primary">Citrus Blends</span>
+          <span class="badge badge-primary">Herbal Earthy</span>
+          <span class="badge badge-primary">Sweet Vanilla</span>
+          <span class="badge badge-primary">Ocean Fresh</span>
+        </div>
+        <a href="fragrance-development.html" class="btn btn-primary">Explore Fragrances</a>
+      </div>
+      <div class="col-lg-7" data-reveal="left" data-delay="200">
+        <!-- Scent cards -->
+        <div class="row g-3">
+          <div class="col-4">
+            <div class="scent-card active" style="background:rgba(255,255,255,.06);border-color:rgba(201,138,91,.4);color:#fff">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--primary-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-3" style="display:inline-block;"><circle cx="12" cy="12" r="3"/><path d="M12 2a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4z"/><path d="M12 14a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4z"/></svg>
+              <p style="font-family:var(--font-display);font-size:1rem;font-weight:500;margin-bottom:.35rem">Rose Garden</p>
+              <p style="font-size:.75rem;color:rgba(255,255,255,.5)">Floral · Soft · Romantic</p>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="scent-card" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);color:#fff">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--primary-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-3" style="display:inline-block;"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.2 2 4a7 7 0 0 1-10 14z"/><path d="M19 2c-2.26 2.33-4.14 4.07-7.11 5.93"/></svg>
+              <p style="font-family:var(--font-display);font-size:1rem;font-weight:500;margin-bottom:.35rem">Forest Walk</p>
+              <p style="font-size:.75rem;color:rgba(255,255,255,.5)">Woody · Deep · Calm</p>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="scent-card" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);color:#fff">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--primary-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-3" style="display:inline-block;"><circle cx="12" cy="12" r="10"/><path d="M12 2v20"/><path d="M2 12h20"/></svg>
+              <p style="font-family:var(--font-display);font-size:1rem;font-weight:500;margin-bottom:.35rem">Citrus Dawn</p>
+              <p style="font-size:.75rem;color:rgba(255,255,255,.5)">Bright · Fresh · Clean</p>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="scent-card" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);color:#fff">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--primary-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-3" style="display:inline-block;"><circle cx="12" cy="12" r="4"/><path d="M12 2v4M12 18v4M4 12h4M18 12h4"/></svg>
+              <p style="font-family:var(--font-display);font-size:1rem;font-weight:500;margin-bottom:.35rem">Cherry Blossom</p>
+              <p style="font-size:.75rem;color:rgba(255,255,255,.5)">Delicate · Sweet · Pure</p>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="scent-card" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);color:#fff">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--primary-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-3" style="display:inline-block;"><path d="M2 12h20M12 2v20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"/></svg>
+              <p style="font-family:var(--font-display);font-size:1rem;font-weight:500;margin-bottom:.35rem">Ocean Breeze</p>
+              <p style="font-size:.75rem;color:rgba(255,255,255,.5)">Marine · Cool · Free</p>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="scent-card" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);color:#fff">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--primary-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-3" style="display:inline-block;"><path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-11-7-11S5 10.7 5 15a7 7 0 0 0 7 7z"/></svg>
+              <p style="font-family:var(--font-display);font-size:1rem;font-weight:500;margin-bottom:.35rem">Vanilla Musk</p>
+              <p style="font-size:.75rem;color:rgba(255,255,255,.5)">Warm · Rich · Sensual</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SUSTAINABILITY ══════════ -->
+<section class="sec">
+  <div class="ns-container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6 text-center d-flex flex-column align-items-center" data-reveal="right">
+        <span class="eyebrow" style="justify-content:center;">Sustainability</span>
+        <h2 class="t-xl sec-title text-center">Good for Skin. Better for Earth.</h2>
+        <div class="divider-line divider-center"></div>
+        <p class="sec-sub mb-4 text-center mx-auto">We believe beautiful products shouldn't cost the planet. Every decision — from ingredient sourcing to final packaging — is made with environmental responsibility at its core.</p>
+        <div class="row g-3 w-100">
+          <div class="col-12">
+            <div class="sus-card text-center">
+              <h5 style="font-family:var(--font-ui);font-size:.95rem;font-weight:600;margin-bottom:.4rem;color:var(--primary)">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:6px;"><path d="M12 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.2 2 4a7 7 0 0 1-10 14z"/><path d="M19 2c-2.26 2.33-4.14 4.07-7.11 5.93"/></svg>
+                Zero Plastic Packaging
+              </h5>
+              <p class="body-sm text-sub">All packaging uses recycled kraft paper, glass, or biodegradable materials. No single-use plastics in our supply chain.</p>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="sus-card text-center">
+              <h5 style="font-family:var(--font-ui);font-size:.95rem;font-weight:600;margin-bottom:.4rem;color:var(--primary)">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:6px;"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                Certified Ethical Sourcing
+              </h5>
+              <p class="body-sm text-sub">Ingredients sourced from Fair Trade certified farms supporting farmer communities in Africa, Asia, and South America.</p>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="sus-card text-center">
+              <h5 style="font-family:var(--font-ui);font-size:.95rem;font-weight:600;margin-bottom:.4rem;color:var(--primary)">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:6px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                Carbon-Neutral Production
+              </h5>
+              <p class="body-sm text-sub">Our manufacturing facility runs on 100% renewable energy. We offset remaining emissions through verified reforestation programs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6" data-reveal="left" data-delay="200">
+        <div style="background:var(--bg-alt);border-radius:var(--radius-xl);padding:3rem;text-align:center;border:1px solid var(--border)">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-4" style="display:inline-block;"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+          <h3 style="font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:var(--primary);margin-bottom:.5rem">1% for Planet</h3>
+          <p style="font-family:var(--font-ui);font-size:.875rem;color:var(--text-sub);margin-bottom:2rem;line-height:1.75">We donate 1% of all wholesale revenue to certified environmental nonprofits working on ocean cleanup and reforestation.</p>
+          <div class="row g-3">
+            <div class="col-4">
+              <div style="background:var(--light);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem .75rem;text-align:center">
+                <p style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--primary);margin-bottom:.25rem" data-count="12" data-suffix="k">0</p>
+                <p style="font-size:.72rem;color:var(--text-muted);font-family:var(--font-ui);text-transform:uppercase;letter-spacing:.08em">Trees Planted</p>
+              </div>
+            </div>
+            <div class="col-4">
+              <div style="background:var(--light);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem .75rem;text-align:center">
+                <p style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--primary);margin-bottom:.25rem" data-count="98" data-suffix="%">0%</p>
+                <p style="font-size:.72rem;color:var(--text-muted);font-family:var(--font-ui);text-transform:uppercase;letter-spacing:.08em">Natural Ingredients</p>
+              </div>
+            </div>
+            <div class="col-4">
+              <div style="background:var(--light);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem .75rem;text-align:center">
+                <p style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--primary);margin-bottom:.25rem" data-count="0" data-suffix="">0</p>
+                <p style="font-size:.72rem;color:var(--text-muted);font-family:var(--font-ui);text-transform:uppercase;letter-spacing:.08em">Plastic Used</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ WHOLESALE BENEFITS ══════════ -->
+<section class="sec" style="background:var(--bg-alt)">
+  <div class="ns-container">
+    <div class="sec-header-center mb-5" data-reveal="up">
+      <span class="eyebrow">Wholesale Program</span>
+      <h2 class="t-xl sec-title">Built for Business Growth</h2>
+      <div class="divider-line divider-center"></div>
+      <p class="sec-sub">A wholesale partnership designed to help your business stock premium natural products with confidence and ease.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3" data-reveal="up" data-delay="100">
+        <div style="text-align:center;padding:2rem 1.5rem;background:var(--light);border:1px solid var(--border);border-radius:var(--radius-xl);height:100%;transition:var(--transition)" onmouseenter="this.style.boxShadow='var(--shadow-xl)';this.style.transform='translateY(-6px)'" onmouseleave="this.style.boxShadow='';this.style.transform=''">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-3" style="display:inline-block;"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          <h4 style="font-family:var(--font-ui);font-size:1rem;font-weight:600;margin-bottom:.65rem">Tiered Pricing</h4>
+          <p class="body-sm text-sub">Volume-based pricing that rewards growth. Bigger orders, better margins for your business.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-reveal="up" data-delay="200">
+        <div style="text-align:center;padding:2rem 1.5rem;background:var(--light);border:1px solid var(--border);border-radius:var(--radius-xl);height:100%;transition:var(--transition)" onmouseenter="this.style.boxShadow='var(--shadow-xl)';this.style.transform='translateY(-6px)'" onmouseleave="this.style.boxShadow='';this.style.transform=''">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-3" style="display:inline-block;"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <h4 style="font-family:var(--font-ui);font-size:1rem;font-weight:600;margin-bottom:.65rem">Dedicated Account Manager</h4>
+          <p class="body-sm text-sub">Your own B2B contact for orders, reorders, and product recommendations.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-reveal="up" data-delay="300">
+        <div style="text-align:center;padding:2rem 1.5rem;background:var(--light);border:1px solid var(--border);border-radius:var(--radius-xl);height:100%;transition:var(--transition)" onmouseenter="this.style.boxShadow='var(--shadow-xl)';this.style.transform='translateY(-6px)'" onmouseleave="this.style.boxShadow='';this.style.transform=''">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-3" style="display:inline-block;"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+          <h4 style="font-family:var(--font-ui);font-size:1rem;font-weight:600;margin-bottom:.65rem">Global Shipping</h4>
+          <p class="body-sm text-sub">Door-to-door delivery to 80+ countries. Full insurance and real-time tracking included.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-reveal="up" data-delay="400">
+        <div style="text-align:center;padding:2rem 1.5rem;background:var(--light);border:1px solid var(--border);border-radius:var(--radius-xl);height:100%;transition:var(--transition)" onmouseenter="this.style.boxShadow='var(--shadow-xl)';this.style.transform='translateY(-6px)'" onmouseleave="this.style.boxShadow='';this.style.transform=''">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-3" style="display:inline-block;"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+          <h4 style="font-family:var(--font-ui);font-size:1rem;font-weight:600;margin-bottom:.65rem">Easy Reordering</h4>
+          <p class="body-sm text-sub">One-click reorders for your bestsellers. Subscription supply available for consistent stock.</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-5" data-reveal="up">
+      <a href="wholesale-program.html" class="btn btn-primary btn-lg">Apply for Wholesale</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ TESTIMONIALS SHOWCASE ══════════ -->
+<section class="sec" style="position:relative;overflow:hidden">
+  <canvas id="bubble-canvas-2" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.15"></canvas>
+  <div class="ns-container" style="position:relative;z-index:1">
+    <div class="sec-header-center mb-5" data-reveal="up">
+      <span class="eyebrow">Reviews</span>
+      <h2 class="t-xl sec-title">What Our Partners Say</h2>
+      <div class="divider-line divider-center"></div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" data-reveal="up" data-delay="100">
+        <div class="testi-card text-center d-flex flex-column align-items-center" style="background:var(--bg-alt)">
+          <div class="testi-stars text-center">★★★★★</div>
+          <p class="body-sm text-sub text-center" style="line-height:1.8">"The private label program was seamless. Our branded soaps look absolutely premium on our spa shelves and clients constantly ask where we source them. Simply outstanding."</p>
+          <div class="testi-author d-flex flex-column align-items-center text-center">
+            <div class="testi-avatar" style="background:linear-gradient(135deg,#7B68EE,#6A5ACD)">AK</div>
+            <div>
+              <p style="font-family:var(--font-ui);font-size:.9rem;font-weight:600;margin-bottom:.1rem">Amara Khoury</p>
+              <p style="font-size:.78rem;color:var(--text-muted)">Director · Serenity Spa & Wellness</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-reveal="up" data-delay="200">
+        <div class="testi-card text-center d-flex flex-column align-items-center" style="border-color:var(--primary);background:rgba(201,138,91,.03)">
+          <div class="testi-stars text-center">★★★★★</div>
+          <p class="body-sm text-sub text-center" style="line-height:1.8">"We've tripled our bath product revenue since switching to Naturelle. The quality speaks for itself and the wholesale margins are genuinely competitive. Our best supplier relationship."</p>
+          <div class="testi-author d-flex flex-column align-items-center text-center">
+            <div class="testi-avatar" style="background:linear-gradient(135deg,#26A69A,#00796B)">TN</div>
+            <div>
+              <p style="font-family:var(--font-ui);font-size:.9rem;font-weight:600;margin-bottom:.1rem">Thomas Nguyen</p>
+              <p style="font-size:.78rem;color:var(--text-muted)">Owner · Pure Living Boutique</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-reveal="up" data-delay="300">
+        <div class="testi-card text-center d-flex flex-column align-items-center" style="background:var(--bg-alt)">
+          <div class="testi-stars text-center">★★★★★</div>
+          <p class="body-sm text-sub text-center" style="line-height:1.8">"The custom fragrance development service is remarkable. We now have a signature hotel scent that guests identify with our brand immediately. Genuinely world-class team."</p>
+          <div class="testi-author d-flex flex-column align-items-center text-center">
+            <div class="testi-avatar" style="background:linear-gradient(135deg,#FF7043,#E64A19)">LP</div>
+            <div>
+              <p style="font-family:var(--font-ui);font-size:.9rem;font-weight:600;margin-bottom:.1rem">Laura Petit</p>
+              <p style="font-size:.78rem;color:var(--text-muted)">GM · Château Lumière Boutique Hotel</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FAQ PREVIEW ══════════ -->
+<section class="sec" style="background:var(--bg-alt)">
+  <div class="ns-container">
+    <div class="row g-5">
+      <div class="col-lg-4 text-center d-flex flex-column align-items-center" data-reveal="right">
+        <span class="eyebrow" style="justify-content:center;">Frequently Asked</span>
+        <h2 class="t-xl sec-title text-center">Quick Answers</h2>
+        <div class="divider-line divider-center"></div>
+        <p class="sec-sub mb-4 text-center mx-auto">Have a question not answered here? Our team responds within 4 business hours.</p>
+        <a href="faq.html" class="btn btn-primary">All FAQs</a>
+      </div>
+      <div class="col-lg-8" data-reveal="left" data-delay="200">
+        <div class="faq-item open">
+          <div class="faq-q">Can I get a sample pack before placing a bulk order?<span class="faq-icon">+</span></div>
+          <div class="faq-a">Yes! We offer a curated wholesale sample pack featuring 10 of our best-selling products for $45 (including shipping), fully credited to your first order. Custom scent samples are available on request with a development fee.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What certifications do your products carry?<span class="faq-icon">+</span></div>
+          <div class="faq-a">Our products are dermatologist-tested, cruelty-free certified (Leaping Bunny), and a select range carries COSMOS Natural certification. All are free from SLS, parabens, synthetic fragrances, and artificial preservatives.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Do you offer white label in addition to private label?<span class="faq-icon">+</span></div>
+          <div class="faq-a">Absolutely. White label (our formulations, your label) starts from 100 units. Private label (custom formulations + custom branding) from 200 units. Both include design support from our in-house packaging team.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How do I set up a wholesale account?<span class="faq-icon">+</span></div>
+          <div class="faq-a">Submit the wholesale application form on our Wholesale Program page. We review all applications within 48 hours. Approved partners receive a dedicated account portal, trade pricing catalog, and access to our full product range.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FINAL CTA ══════════ -->
+<section class="sec" style="background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%);color:#fff;text-align:center;overflow:hidden;position:relative">
+  <div style="position:absolute;top:-30%;right:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(255,255,255,.1) 0%,transparent 70%);pointer-events:none"></div>
+  <div class="ns-container" style="position:relative;z-index:1" data-reveal="up">
+    <h2 class="t-xl mb-3">Begin Your Wholesale Journey</h2>
+    <p style="color:rgba(255,255,255,.8);font-size:1.05rem;max-width:540px;margin:0 auto 2.5rem;line-height:1.8">Join 580+ wholesale partners already growing their business with Naturelle Supply Co.</p>
+    <div class="d-flex flex-wrap gap-3 justify-content-center">
+      <a href="wholesale-program.html" class="btn btn-white btn-lg">Apply for Wholesale</a>
+      <a href="contact.html" class="btn btn-ghost btn-lg">Contact Our Team</a>
+    </div>
+  </div>
+</section>
+
+<footer id="main-footer"></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

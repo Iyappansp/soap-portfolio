@@ -14,13 +14,14 @@
         { label: 'Home 1 (Classic)', href: 'index.html' },
         { label: 'Home 2 (Creative Split)', href: 'home-2.html' }
       ]
-    },
+    },  
+        { label: 'About', href: 'about.html' },
+
     { label: 'Products', href: 'products.html' },
     { label: 'Soaps', href: 'soaps.html' },
     { label: 'Bath Bombs', href: 'bath-bombs.html' },
     { label: 'Private Label', href: 'private-label.html' },
     { label: 'Wholesale', href: 'wholesale-program.html' },
-    { label: 'About', href: 'about.html' },
     { label: 'Blog', href: 'blog.html' },
     { label: 'Contact', href: 'contact.html' },
   ];
@@ -47,7 +48,7 @@
         const subLinks = l.dropdown.map(sub => `<a class="dropdown-item${activeCls(sub.href)}" href="${sub.href}">${sub.label}</a>`).join('');
         return `
       <div class="nav-dropdown">
-        <a class="nav-item dropdown-toggle${isDActive ? ' active' : ''}" href="#">${l.label} <span class="arrow-down"></span></a>
+        <a class="nav-item dropdown-toggle${isDActive ? ' active' : ''}" href="#">${l.label} <svg class="chevron-icon" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-left:4px;transition:transform .3s ease;"><polyline points="6 9 12 15 18 9"/></svg></a>
         <div class="nav-dropdown-menu">
           ${subLinks}
         </div>
@@ -62,7 +63,7 @@
         const subLinks = l.dropdown.map(sub => `<a class="nd-sub-link${activeCls(sub.href)}" href="${sub.href}">${sub.label}</a>`).join('');
         return `
       <div class="nd-dropdown">
-        <button class="nd-link nd-dropdown-toggle${isDActive ? ' active' : ''}" aria-expanded="false">${l.label} <span class="arrow-down"></span></button>
+        <button class="nd-link nd-dropdown-toggle${isDActive ? ' active' : ''}" aria-expanded="false">${l.label} <svg class="chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-left:4px;transition:transform .3s ease;"><polyline points="6 9 12 15 18 9"/></svg></button>
         <div class="nd-dropdown-menu">
           ${subLinks}
         </div>
@@ -86,7 +87,6 @@
           </button>
           <button class="nav-ctrl-btn" id="rtl-toggle" aria-label="Toggle RTL" title="Toggle RTL/LTR layout">RTL</button>
           <a class="nav-login-btn nav-auth-desktop" href="login.html">Login</a>
-          <a class="nav-signup-btn nav-auth-desktop" href="signup.html" style="margin-left: 8px;">Sign Up</a>
           <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
             <span class="hbg-bar"></span>
             <span class="hbg-bar"></span>
@@ -98,6 +98,19 @@
   </nav>
   <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
     ${dLinks}
+    <div class="nd-options-row">
+      <button class="nd-option-btn" id="mobile-theme-toggle" aria-label="Toggle theme">
+        <span class="theme-icon-wrap" style="display:inline-flex;align-items:center;">
+          <svg class="ico-moon-m" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="ico-sun-m" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </span>
+        <span class="theme-text">Dark Mode</span>
+      </button>
+      <button class="nd-option-btn" id="mobile-rtl-toggle" aria-label="Toggle RTL">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px;"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+        <span>RTL</span>
+      </button>
+    </div>
     <div class="nd-ctas">
       <a class="btn btn-primary" href="login.html">Login</a>
       <a class="btn btn-secondary" href="signup.html">Sign Up</a>
@@ -113,6 +126,8 @@
     const drawer = document.getElementById('nav-drawer');
     const themeBtn = document.getElementById('theme-toggle');
     const rtlBtn = document.getElementById('rtl-toggle');
+    const themeBtnMobile = document.getElementById('mobile-theme-toggle');
+    const rtlBtnMobile = document.getElementById('mobile-rtl-toggle');
     const icoMoon = document.getElementById('ico-moon');
     const icoSun = document.getElementById('ico-sun');
 
@@ -164,21 +179,40 @@
       document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
       if (icoMoon) icoMoon.style.display = dark ? 'none' : 'block';
       if (icoSun) icoSun.style.display = dark ? 'block' : 'none';
+      
+      const icoMoonM = document.querySelector('.ico-moon-m');
+      const icoSunM = document.querySelector('.ico-sun-m');
+      const themeText = document.querySelector('.theme-text');
+      if (icoMoonM) icoMoonM.style.display = dark ? 'none' : 'block';
+      if (icoSunM) icoSunM.style.display = dark ? 'block' : 'none';
+      if (themeText) themeText.textContent = dark ? 'Light Mode' : 'Dark Mode';
+
       localStorage.setItem('ns-theme', dark ? 'dark' : 'light');
     }
     applyTheme(localStorage.getItem('ns-theme') === 'dark');
     if (themeBtn) {
       themeBtn.addEventListener('click', () => applyTheme(document.documentElement.getAttribute('data-theme') !== 'dark'));
     }
+    if (themeBtnMobile) {
+      themeBtnMobile.addEventListener('click', () => applyTheme(document.documentElement.getAttribute('data-theme') !== 'dark'));
+    }
 
     // RTL
     function applyDir(rtl) {
       document.documentElement.setAttribute('dir', rtl ? 'rtl' : 'ltr');
       localStorage.setItem('ns-dir', rtl ? 'rtl' : 'ltr');
+      
+      const rtlText = document.querySelector('#mobile-rtl-toggle span');
+      if (rtlText) {
+        rtlText.textContent = rtl ? 'LTR Layout' : 'RTL Layout';
+      }
     }
     applyDir(localStorage.getItem('ns-dir') === 'rtl');
     if (rtlBtn) {
       rtlBtn.addEventListener('click', () => applyDir(document.documentElement.getAttribute('dir') !== 'rtl'));
+    }
+    if (rtlBtnMobile) {
+      rtlBtnMobile.addEventListener('click', () => applyDir(document.documentElement.getAttribute('dir') !== 'rtl'));
     }
   }
 
@@ -505,6 +539,29 @@
     });
   }
 
+  /* ── PASSWORD TOGGLE ────────────────────────────────────── */
+  function initPasswordToggle() {
+    document.querySelectorAll('.pass-input-container').forEach(container => {
+      const input = container.querySelector('input');
+      const btn = container.querySelector('.pass-toggle-btn');
+      if (!input || !btn) return;
+      
+      const eyeOn = btn.querySelector('.eye-icon');
+      const eyeOff = btn.querySelector('.eye-icon-off');
+      
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const isPass = input.type === 'password';
+        input.type = isPass ? 'text' : 'password';
+        
+        if (eyeOn && eyeOff) {
+          eyeOn.style.display = isPass ? 'none' : 'block';
+          eyeOff.style.display = isPass ? 'block' : 'none';
+        }
+      });
+    });
+  }
+
   /* ── RE-INIT CURSOR AFTER BUILD ─────────────────────────── */
   function reCursor() {
     // Custom cursor animation disabled
@@ -526,6 +583,7 @@
     initForms();
     initAnchors();
     initStagger();
+    initPasswordToggle();
     reCursor();
 
     // Canvases

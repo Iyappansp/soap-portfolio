@@ -777,6 +777,10 @@ textarea.ns-input{resize:vertical;min-height:130px}
   .t-hero{font-size:5.8rem}
 }
 
+@media(min-width:768px) and (max-width:991px){
+  .justify-content-center-tab{justify-content:center !important}
+}
+
 /* ============================================================
    SVG ICON HELPER
    ============================================================ */

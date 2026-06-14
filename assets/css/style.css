@@ -232,7 +232,7 @@ h1, h2, h3, h4, h5, h6,
   border: 1px solid var(--border);
 }
 .artisan-stat-card.bg-primary {
-  background: var(--primary);
+  background: var(--primary) !important;
   color: #fff;
 }
 @media (max-width: 576px) {
@@ -248,9 +248,16 @@ h1, h2, h3, h4, h5, h6,
   }
   .artisan-stats-col {
     flex-direction: row;
+    gap: 0.75rem;
   }
   .artisan-stat-card {
-    padding: 1rem 0.5rem;
+    min-width: 0;
+    padding: 1rem 0.4rem;
+  }
+  .artisan-stat-card .stat-lbl {
+    font-size: 0.65rem !important;
+    letter-spacing: 0.05em !important;
+    line-height: 1.2;
   }
 }
 .process-item{display:flex;align-items:flex-start;text-align:left;gap:1.75rem;padding-bottom:3rem;position:relative}

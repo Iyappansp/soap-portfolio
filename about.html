@@ -156,7 +156,7 @@
       border: 1px solid var(--border);
     }
     .about-stat-card.bg-primary {
-      background: var(--primary);
+      background: var(--primary) !important;
       color: #fff;
     }
     @media (max-width: 576px) {
@@ -168,15 +168,19 @@
       }
       .about-story-stats {
         flex-direction: row;
+        gap: 0.75rem !important;
       }
       .about-stat-card {
-        padding: 1.25rem 0.75rem;
+        min-width: 0;
+        padding: 1rem 0.4rem;
       }
       .about-stat-card .stat-val {
         font-size: 2rem !important;
       }
       .about-stat-card .stat-lbl {
-        font-size: 0.72rem !important;
+        font-size: 0.65rem !important;
+        letter-spacing: 0.05em !important;
+        line-height: 1.2;
       }
     }
   </style>

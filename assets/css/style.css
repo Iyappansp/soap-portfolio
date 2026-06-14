@@ -56,7 +56,7 @@
    RESET
    ============================================================ */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;font-size:16px;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;font-size:16px;-webkit-text-size-adjust:100%;overflow-x:hidden}
 body{font-family:var(--font-body);background:var(--bg);color:var(--text-main);line-height:1.6;overflow-x:hidden;transition:background .3s,color .3s}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit;text-decoration:none;transition:var(--transition)}
@@ -275,7 +275,8 @@ textarea.ns-input{resize:vertical;min-height:130px}
    NAVBAR
    ============================================================ */
 #main-header{position:fixed !important;top:0 !important;left:0 !important;right:0 !important;z-index:2000 !important;height:var(--header-h) !important}
-.navbar{height:var(--header-h);display:flex;align-items:center;background:var(--bg);border-bottom:1px solid var(--border);transition:background .4s,box-shadow .4s,backdrop-filter .4s;box-shadow:var(--shadow-sm)}
+.navbar{height:var(--header-h);display:flex;align-items:center;background:rgba(250,248,245,.93);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:background .4s,box-shadow .4s,backdrop-filter .4s;box-shadow:var(--shadow-sm)}
+[data-theme="dark"] .navbar{background:rgba(17,24,39,.93)}
 
 /* Logo Sizing & Theme Filters */
 .logo-img {
@@ -306,12 +307,7 @@ textarea.ns-input{resize:vertical;min-height:130px}
 .logo-mark svg{color:#fff}
 .logo-name{font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--text-main);line-height:1.1}
 .logo-tag{font-family:var(--font-ui);font-size:.6rem;font-weight:600;color:var(--primary);text-transform:uppercase;letter-spacing:.1em;display:block}
-/* .hero-nav .navbar:not(.scrolled) .logo-name,
-.hero-nav .navbar:not(.scrolled) .nav-item{color:rgba(255,255,255,.9)}
-.hero-nav .navbar:not(.scrolled) .nav-item:hover,.hero-nav .navbar:not(.scrolled) .nav-item.active{color:#fff}
-.hero-nav .navbar:not(.scrolled) .nav-ctrl-btn{color:rgba(255,255,255,.8);border-color:rgba(255,255,255,.3);}
-.hero-nav .navbar:not(.scrolled) .nav-ctrl-btn:hover{color:#fff;border-color:#fff;background:rgba(255,255,255,.12)}
-.hero-nav .navbar:not(.scrolled) .hbg-bar{background:#fff} */
+
 .nav-links{display:flex;align-items:center;gap:.15rem}
 .nav-item{font-family:var(--font-ui);font-size:.875rem;font-weight:500;color:var(--text-main);padding:.5rem .85rem;border-radius:var(--radius-sm);transition:var(--transition);position:relative;white-space:nowrap;}
 .nav-item::after{content:'';position:absolute;bottom:2px;left:.85rem;right:.85rem;height:2px;background:var(--primary);border-radius:1px;transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
@@ -431,8 +427,7 @@ textarea.ns-input{resize:vertical;min-height:130px}
 .nav-login-btn:hover{background:var(--primary-dark);border-color:var(--primary-dark);color:#fff;transform:translateY(-1px);box-shadow:var(--shadow-sm);}
 .nav-signup-btn{background:transparent;color:var(--primary);border-color:var(--primary);}
 .nav-signup-btn:hover{background:var(--primary);color:#fff;border-color:var(--primary);transform:translateY(-1px);box-shadow:var(--shadow-sm);}
-/* .hero-nav .navbar:not(.scrolled) .nav-signup-btn{color:rgba(255,255,255,.9);border-color:rgba(255,255,255,.35);}
-.hero-nav .navbar:not(.scrolled) .nav-signup-btn:hover{background:#fff;color:var(--dark);border-color:#fff;} */
+
 .nav-hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;width:40px;height:40px;gap:5px;cursor:pointer;border-radius:var(--radius-sm);background:transparent;border:1.5px solid transparent;transition:var(--transition)}
 .nav-hamburger:hover{background:rgba(201,138,91,.1);border-color:rgba(201,138,91,.18)}
 .nav-hamburger:hover .hbg-bar {
@@ -596,7 +591,7 @@ textarea.ns-input{resize:vertical;min-height:130px}
 .ing-card{padding:1.75rem;border-radius:var(--radius-lg);border:1px solid var(--border);background:var(--light);transition:var(--transition);text-align:center}
 .ing-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-5px);border-color:rgba(201,138,91,.25)}
 .ing-icon-wrap{width:72px;height:72px;border-radius:50%;background:rgba(201,138,91,.1);display:flex;align-items:center;justify-content:center;margin:0 auto 1.1rem;font-size:2rem;transition:var(--transition)}
-.ing-card:hover .ing-icon-wrap{background:var(--primary);transform:scale(1.08)}
+.ing-card:hover .ing-icon-wrap{background:var(--primary);color:#fff;transform:scale(1.08)}
 
 /* ============================================================
    INDUSTRY CARD
@@ -810,7 +805,7 @@ textarea.ns-input{resize:vertical;min-height:130px}
 .auth-wrapper {
   display: flex;
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   overflow-y: auto;
   align-items: center;
   justify-content: center;
@@ -960,4 +955,18 @@ textarea.ns-input{resize:vertical;min-height:130px}
   width: 18px;
   height: 18px;
   fill: currentColor;
+}
+
+/* Mobile Scroll Locking when Drawer is Open */
+html.menu-open,
+body.menu-open {
+  height: 100svh !important;
+  overflow: hidden !important;
+}
+
+/* Prevent SVG Flickering on Hover */
+.nav-ctrl-btn svg,
+.nav-hamburger svg,
+.nd-option-btn svg {
+  pointer-events: none !important;
 }

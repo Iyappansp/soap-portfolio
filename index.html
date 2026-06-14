@@ -22,7 +22,14 @@
 <header id="main-header"></header>
 
 <!-- ══════════ HERO ══════════ -->
-<section class="hero" style="position: relative; overflow: hidden; background: linear-gradient(135deg, rgba(26, 14, 7, 0.55) 0%, rgba(45, 26, 15, 0.60) 100%), url('assets/img/hero_classic.png') center/cover no-repeat;">
+<section class="hero" style="position: relative; overflow: hidden; background: #1a0e07 url('assets/img/hero_classic.png') center/cover no-repeat;">
+  <!-- Background Video -->
+  <video autoplay loop muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; pointer-events: none;">
+    <source src="assets/10574229-uhd_4096_2160_25fps.mp4" type="video/mp4">
+  </video>
+  
+  <!-- Overlay Gradient -->
+  <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(26, 14, 7, 0.65) 0%, rgba(45, 26, 15, 0.70) 100%); z-index: 1; pointer-events: none;"></div>
   
   <canvas id="bubble-canvas" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2;opacity:.45"></canvas>
   <!-- Orbs -->
@@ -321,7 +328,7 @@
         <div class="ing-card">
           <div class="ing-icon-wrap"><svg class="svg-icon"><circle cx="12" cy="12" r="10"/><path d="M12 2v20"/><path d="M2 12h20"/></svg></div>
           <h5 style="font-family:var(--font-ui);font-size:.85rem;font-weight:600;margin-bottom:.35rem">Charcoal</h5>
-          <p style="font-size:.78rem;color:var(--text-muted)">Activated bamboo</p>
+          <p style="font-size:.78rem;color:var(--text-muted)">Bamboo</p>
         </div>
       </div>
       <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-reveal="up" data-delay="400">
@@ -581,7 +588,7 @@
       <h2 class="t-xl sec-title">Trusted by Leading Brands</h2>
       <div class="divider-line divider-center"></div>
     </div>
-    <div class="row g-4">
+    <div class="row g-4 justify-content-center">
       <div class="col-md-6 col-lg-4" data-reveal="up" data-delay="100">
         <div class="testi-card text-center d-flex flex-column align-items-center">
           <div class="testi-stars text-center">★★★★★</div>

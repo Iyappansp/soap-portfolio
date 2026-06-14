@@ -40,7 +40,6 @@
   function buildHeader() {
     const el = document.getElementById('main-header');
     if (!el) return;
-    if (isHero()) document.body.classList.add('hero-nav');
 
     const links = NAV.map(l => {
       if (l.dropdown) {
@@ -145,20 +144,28 @@
         drawer.classList.toggle('open', open);
         burger.setAttribute('aria-expanded', open);
         drawer.setAttribute('aria-hidden', !open);
-        document.body.style.overflow = open ? 'hidden' : '';
+        if (open) {
+          document.body.classList.add('menu-open');
+          document.documentElement.classList.add('menu-open');
+        } else {
+          document.body.classList.remove('menu-open');
+          document.documentElement.classList.remove('menu-open');
+        }
       });
 
       drawer.querySelectorAll('.nd-link, .nd-sub-link').forEach(l => l.addEventListener('click', () => {
         burger.classList.remove('open');
         drawer.classList.remove('open');
-        document.body.style.overflow = '';
+        document.body.classList.remove('menu-open');
+        document.documentElement.classList.remove('menu-open');
       }));
 
       document.addEventListener('click', e => {
         if (navbar && !navbar.contains(e.target) && !drawer.contains(e.target)) {
           burger.classList.remove('open');
           drawer.classList.remove('open');
-          document.body.style.overflow = '';
+          document.body.classList.remove('menu-open');
+          document.documentElement.classList.remove('menu-open');
         }
       });
 

@@ -125,6 +125,60 @@
       font-size: 1.4rem;
       flex-shrink: 0;
     }
+
+    /* Responsive About story grid and card spacing */
+    .about-story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .about-story-img {
+      border-radius: var(--radius-xl);
+      background: url('assets/img/about_story.png') center/cover no-repeat;
+      aspect-ratio: 3/4;
+      box-shadow: var(--shadow-xl);
+    }
+    .about-story-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .about-stat-card {
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+    }
+    .about-stat-card.bg-alt {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+    }
+    .about-stat-card.bg-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+    @media (max-width: 576px) {
+      .about-story-grid {
+        grid-template-columns: 1fr;
+      }
+      .about-story-img {
+        aspect-ratio: 16/10;
+      }
+      .about-story-stats {
+        flex-direction: row;
+      }
+      .about-stat-card {
+        padding: 1.25rem 0.75rem;
+      }
+      .about-stat-card .stat-val {
+        font-size: 2rem !important;
+      }
+      .about-stat-card .stat-lbl {
+        font-size: 0.72rem !important;
+      }
+    }
   </style>
 </head>
 
@@ -150,27 +204,16 @@
     <div class="ns-container">
       <div class="row align-items-center g-5">
         <div class="col-lg-6" data-reveal="right">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
-            <div
-              style="border-radius:var(--radius-xl);background:url('assets/img/about_story.png') center/cover no-repeat;aspect-ratio:3/4;box-shadow:var(--shadow-xl);">
-            </div>
-            <div style="display:flex;flex-direction:column;gap:1rem;">
-              <div
-                style="border-radius:var(--radius-lg);background:var(--bg-alt);padding:1.5rem;border:1px solid var(--border);flex:1;display:flex;flex-direction:column;justify-content:center;">
-                <p
-                  style="font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:var(--primary);line-height:1;">
-                  2010</p>
-                <p
-                  style="font-family:var(--font-ui);font-size:.78rem;color:var(--text-sub);text-transform:uppercase;letter-spacing:.08em;margin-top:.3rem;">
-                  Year Founded</p>
+          <div class="about-story-grid">
+            <div class="about-story-img"></div>
+            <div class="about-story-stats">
+              <div class="about-stat-card bg-alt">
+                <p class="stat-val" style="font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:var(--primary);line-height:1;margin-bottom:0">2010</p>
+                <p class="stat-lbl" style="font-family:var(--font-ui);font-size:.78rem;color:var(--text-sub);text-transform:uppercase;letter-spacing:.08em;margin-top:.3rem;margin-bottom:0">Year Founded</p>
               </div>
-              <div
-                style="border-radius:var(--radius-lg);background:var(--primary);padding:1.5rem;flex:1;display:flex;flex-direction:column;justify-content:center;">
-                <p style="font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:#fff;line-height:1;">
-                  14+</p>
-                <p
-                  style="font-family:var(--font-ui);font-size:.78rem;color:rgba(255,255,255,.8);text-transform:uppercase;letter-spacing:.08em;margin-top:.3rem;">
-                  Years Crafting</p>
+              <div class="about-stat-card bg-primary">
+                <p class="stat-val" style="font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:#fff;line-height:1;margin-bottom:0">14+</p>
+                <p class="stat-lbl" style="font-family:var(--font-ui);font-size:.78rem;color:rgba(255,255,255,.8);text-transform:uppercase;letter-spacing:.08em;margin-top:.3rem;margin-bottom:0">Years Crafting</p>
               </div>
             </div>
           </div>

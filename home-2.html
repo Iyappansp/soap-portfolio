@@ -34,6 +34,49 @@
     .sus-card{padding:2rem;border-radius:var(--radius-xl);border:1px solid var(--border);background:var(--light);transition:var(--transition);position:relative;overflow:hidden}
     .sus-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(to bottom,var(--primary),var(--primary-light))}
     .sus-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px)}
+
+    /* Sustainability stats card styling for responsiveness */
+    .sustainability-panel {
+      background: var(--bg-alt);
+      border-radius: var(--radius-xl);
+      padding: 3rem;
+      text-align: center;
+      border: 1px solid var(--border);
+    }
+    .sus-stat-card {
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem 0.5rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      transition: var(--transition);
+    }
+    .sus-stat-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    @media(max-width:576px) {
+      .sustainability-panel {
+        padding: 2rem 1rem !important;
+      }
+      .sus-stat-card {
+        padding: 0.75rem 0.25rem;
+      }
+      .sus-stat-card .stat-num-small {
+        font-size: 1.25rem !important;
+        margin-bottom: 0.15rem !important;
+      }
+      .sus-stat-card .stat-lbl-small {
+        font-size: 0.58rem !important;
+        letter-spacing: 0.02em !important;
+        line-height: 1.25 !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -117,15 +160,15 @@
   <div class="ns-container">
     <div class="row align-items-center g-5">
       <div class="col-lg-6 d-flex flex-column" data-reveal="right">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;flex:1">
-          <div style="border-radius:var(--radius-xl);background:url('assets/img/artisan_craft.png') center/cover no-repeat;box-shadow:var(--shadow-xl);min-height:380px;"></div>
-          <div style="display:flex;flex-direction:column;gap:1rem">
-            <div style="border-radius:var(--radius-lg);background:url('assets/img/artisan_botanical.png') center/cover no-repeat;flex:1.2;box-shadow:var(--shadow-md);min-height:140px;"></div>
-            <div style="border-radius:var(--radius-lg);background:var(--bg-alt);border:1px solid var(--border);padding:1rem;display:flex;flex-direction:column;justify-content:center;text-align:center;box-shadow:var(--shadow-md);flex:1">
+        <div class="artisan-grid">
+          <div class="artisan-img-primary" style="background-image: url('assets/img/artisan_craft.png');"></div>
+          <div class="artisan-stats-col">
+            <div class="artisan-img-secondary" style="background-image: url('assets/img/artisan_botanical.png');"></div>
+            <div class="artisan-stat-card bg-alt">
               <p style="font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--primary);line-height:1;margin-bottom:.25rem">4–6</p>
               <p style="font-family:var(--font-ui);font-size:.72rem;color:var(--text-sub);text-transform:uppercase;letter-spacing:.1em;margin-bottom:0;">Week Cure Time</p>
             </div>
-            <div style="border-radius:var(--radius-lg);background:var(--primary);padding:1rem;display:flex;flex-direction:column;justify-content:center;text-align:center;box-shadow:var(--shadow-md);flex:1">
+            <div class="artisan-stat-card bg-primary">
               <p style="font-family:var(--font-display);font-size:2rem;font-weight:700;color:#fff;line-height:1;margin-bottom:.25rem">100%</p>
               <p style="font-family:var(--font-ui);font-size:.72rem;color:rgba(255,255,255,.8);text-transform:uppercase;letter-spacing:.1em;margin-bottom:0;">Organic Oils</p>
             </div>
@@ -362,27 +405,27 @@
         </div>
       </div>
       <div class="col-lg-6" data-reveal="left" data-delay="200">
-        <div style="background:var(--bg-alt);border-radius:var(--radius-xl);padding:3rem;text-align:center;border:1px solid var(--border)">
+        <div class="sustainability-panel">
           <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-4" style="display:inline-block;"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
           <h3 style="font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:var(--primary);margin-bottom:.5rem">1% for Planet</h3>
           <p style="font-family:var(--font-ui);font-size:.875rem;color:var(--text-sub);margin-bottom:2rem;line-height:1.75">We donate 1% of all wholesale revenue to certified environmental nonprofits working on ocean cleanup and reforestation.</p>
           <div class="row g-3">
             <div class="col-4">
-              <div style="background:var(--light);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem .75rem;text-align:center">
-                <p style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--primary);margin-bottom:.25rem" data-count="12" data-suffix="k">0</p>
-                <p style="font-size:.72rem;color:var(--text-muted);font-family:var(--font-ui);text-transform:uppercase;letter-spacing:.08em">Trees Planted</p>
+              <div class="sus-stat-card">
+                <p class="stat-num-small" style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--primary);margin-bottom:.25rem" data-count="12" data-suffix="k">0</p>
+                <p class="stat-lbl-small" style="font-size:.72rem;color:var(--text-muted);font-family:var(--font-ui);text-transform:uppercase;letter-spacing:.08em;margin-bottom:0">Trees Planted</p>
               </div>
             </div>
             <div class="col-4">
-              <div style="background:var(--light);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem .75rem;text-align:center">
-                <p style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--primary);margin-bottom:.25rem" data-count="98" data-suffix="%">0%</p>
-                <p style="font-size:.72rem;color:var(--text-muted);font-family:var(--font-ui);text-transform:uppercase;letter-spacing:.08em">Natural Ingredients</p>
+              <div class="sus-stat-card">
+                <p class="stat-num-small" style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--primary);margin-bottom:.25rem" data-count="98" data-suffix="%">0%</p>
+                <p class="stat-lbl-small" style="font-size:.72rem;color:var(--text-muted);font-family:var(--font-ui);text-transform:uppercase;letter-spacing:.08em;margin-bottom:0">Natural Ingredients</p>
               </div>
             </div>
             <div class="col-4">
-              <div style="background:var(--light);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem .75rem;text-align:center">
-                <p style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--primary);margin-bottom:.25rem" data-count="0" data-suffix="">0</p>
-                <p style="font-size:.72rem;color:var(--text-muted);font-family:var(--font-ui);text-transform:uppercase;letter-spacing:.08em">Plastic Used</p>
+              <div class="sus-stat-card">
+                <p class="stat-num-small" style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--primary);margin-bottom:.25rem" data-count="0" data-suffix="">0</p>
+                <p class="stat-lbl-small" style="font-size:.72rem;color:var(--text-muted);font-family:var(--font-ui);text-transform:uppercase;letter-spacing:.08em;margin-bottom:0">Plastic Used</p>
               </div>
             </div>
           </div>

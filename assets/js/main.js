@@ -97,23 +97,8 @@
   </nav>
   <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
     ${dLinks}
-    <div class="nd-options-row">
-      <button class="nd-option-btn" id="mobile-theme-toggle" aria-label="Toggle theme">
-        <span class="theme-icon-wrap" style="display:inline-flex;align-items:center;">
-          <svg class="ico-moon-m" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          <svg class="ico-sun-m" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-        </span>
-        <span class="theme-text">Dark Mode</span>
-      </button>
-      <button class="nd-option-btn" id="mobile-rtl-toggle" aria-label="Toggle RTL">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px;"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-        <span>RTL</span>
-      </button>
-    </div>
     <div class="nd-ctas">
       <a class="btn btn-primary" href="login.html">Login</a>
-      <a class="btn btn-secondary" href="signup.html">Sign Up</a>
-      <a class="btn btn-secondary" href="contact.html">Contact Us</a>
     </div>
   </div>`;
   }
@@ -153,7 +138,7 @@
         }
       });
 
-      drawer.querySelectorAll('.nd-link, .nd-sub-link').forEach(l => l.addEventListener('click', () => {
+      drawer.querySelectorAll('.nd-link:not(.nd-dropdown-toggle), .nd-sub-link').forEach(l => l.addEventListener('click', () => {
         burger.classList.remove('open');
         drawer.classList.remove('open');
         document.body.classList.remove('menu-open');
@@ -212,6 +197,16 @@
       const rtlText = document.querySelector('#mobile-rtl-toggle span');
       if (rtlText) {
         rtlText.textContent = rtl ? 'LTR Layout' : 'RTL Layout';
+      }
+
+      const rtlBtn = document.getElementById('rtl-toggle');
+      if (rtlBtn) {
+        rtlBtn.textContent = rtl ? 'LTR' : 'RTL';
+      }
+
+      const rtlBtnMobile = document.getElementById('mobile-rtl-toggle');
+      if (rtlBtnMobile) {
+        rtlBtnMobile.textContent = rtl ? 'LTR' : 'RTL';
       }
     }
     applyDir(localStorage.getItem('ns-dir') === 'rtl');

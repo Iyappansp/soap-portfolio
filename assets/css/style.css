@@ -450,7 +450,7 @@ textarea.ns-input{resize:vertical;min-height:130px}
   .nav-links{display:none}
   .nav-hamburger{display:flex}
   .nav-auth-desktop{display:none !important}
-  .navbar .nav-ctrl-btn:not(#nav-hamburger) {display:none !important}
+  .navbar .nav-ctrl-btn:not(#nav-hamburger) {display:flex}
 }
 
 /* Prevent navigation squishing on viewports 1200px - 1399px */

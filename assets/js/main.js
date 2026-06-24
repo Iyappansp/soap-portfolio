@@ -47,7 +47,7 @@
         const subLinks = l.dropdown.map(sub => `<a class="dropdown-item${activeCls(sub.href)}" href="${sub.href}">${sub.label}</a>`).join('');
         return `
       <div class="nav-dropdown">
-        <a class="nav-item dropdown-toggle${isDActive ? ' active' : ''}" href="#">${l.label} <svg class="chevron-icon" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-left:4px;transition:transform .3s ease;"><polyline points="6 9 12 15 18 9"/></svg></a>
+        <a class="nav-item dropdown-toggle${isDActive ? ' active' : ''}" href="#">${l.label} <svg class="chevron-icon" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-inline-start:4px;transition:transform .3s ease;"><polyline points="6 9 12 15 18 9"/></svg></a>
         <div class="nav-dropdown-menu">
           ${subLinks}
         </div>
@@ -62,7 +62,7 @@
         const subLinks = l.dropdown.map(sub => `<a class="nd-sub-link${activeCls(sub.href)}" href="${sub.href}">${sub.label}</a>`).join('');
         return `
       <div class="nd-dropdown">
-        <button class="nd-link nd-dropdown-toggle${isDActive ? ' active' : ''}" aria-expanded="false">${l.label} <svg class="chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-left:4px;transition:transform .3s ease;"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <button class="nd-link nd-dropdown-toggle${isDActive ? ' active' : ''}" aria-expanded="false">${l.label} <svg class="chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-inline-start:4px;transition:transform .3s ease;"><polyline points="6 9 12 15 18 9"/></svg></button>
         <div class="nd-dropdown-menu">
           ${subLinks}
         </div>

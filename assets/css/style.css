@@ -809,9 +809,6 @@ textarea.ns-input{resize:vertical;min-height:130px}
    RTL
    ============================================================ */
 [dir="rtl"] body{direction:rtl;text-align:right}
-[dir="rtl"] .nav-wrap{flex-direction:row-reverse}
-[dir="rtl"] .nav-links{flex-direction:row-reverse}
-[dir="rtl"] .nav-ctrl{flex-direction:row-reverse}
 [dir="rtl"] .eyebrow{flex-direction:row-reverse}
 [dir="rtl"] .eyebrow::before{content:none}
 [dir="rtl"] .eyebrow::after{content:'';display:block;width:22px;height:2px;background:var(--primary);border-radius:1px;flex-shrink:0}
@@ -823,12 +820,14 @@ textarea.ns-input{resize:vertical;min-height:130px}
 [dir="rtl"] .testi-author,[dir="rtl"] .footer-bottom,[dir="rtl"] .f-social,[dir="rtl"] .tab-bar{flex-direction:row-reverse}
 [dir="rtl"] .f-link:hover{padding-left:0;padding-right:4px}
 [dir="rtl"] .nd-link:hover,.nd-link.active{padding-left:1.5rem;padding-right:2rem}
+[dir="rtl"] .nd-sub-link:hover,[dir="rtl"] .nd-sub-link.active{padding-left:1.5rem;padding-right:2rem}
+[dir="rtl"] .dropdown-item{text-align:right}
 [dir="rtl"] .faq-q{flex-direction:row-reverse}
 [dir="rtl"] .price-feature{flex-direction:row-reverse}
 [dir="rtl"] .contact-info-item{flex-direction:row-reverse}
 [dir="rtl"] #btt{right:auto;left:2rem}
 [dir="rtl"] .btn svg{transform:scaleX(-1)}
-[dir="rtl"] .nav-item::after{transform-origin:right;left:auto;right:.85rem}
+[dir="rtl"] .nav-item::after{transform-origin:right}
 [dir="rtl"] .testi-card::before{left:auto;right:1.5rem}
 
 /* ============================================================

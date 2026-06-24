@@ -270,7 +270,7 @@ h1, h2, h3, h4, h5, h6,
 
 @media(min-width:992px){
   .process-wrap{display:flex;gap:2rem;justify-content:space-between;align-items:flex-start;position:relative;padding-top:1rem}
-  .process-wrap::before{content:'';position:absolute;top:23px;left:10%;right:10%;height:2px;background:linear-gradient(to right,var(--primary),rgba(201,138,91,.25));z-index:0}
+  .process-wrap::before{content:'';position:absolute;top:39px;left:10%;right:10%;height:2px;background:linear-gradient(to right,var(--primary),rgba(201,138,91,.25));z-index:0}
   .process-item{flex:1;flex-direction:column;align-items:center;text-align:center;padding-bottom:0}
   .process-stem{display:none !important}
   .process-num{margin-bottom:1.25rem}
@@ -1053,4 +1053,29 @@ body.menu-open {
 .nav-hamburger svg,
 .nd-option-btn svg {
   pointer-events: none !important;
+}
+
+/* Auth Page Controls Positioned Outside Container */
+.auth-page-ctrls {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+[dir="rtl"] .auth-page-ctrls {
+  right: auto;
+  left: 1.5rem;
+}
+@media (max-width: 767px) {
+  .auth-page-ctrls {
+    top: 1rem;
+    right: 1rem;
+  }
+  [dir="rtl"] .auth-page-ctrls {
+    right: auto;
+    left: 1rem;
+  }
 }
